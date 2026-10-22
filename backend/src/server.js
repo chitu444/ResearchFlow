@@ -38,7 +38,13 @@ const allowedOrigins = new Set([
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || allowedOrigins.has(origin) || env.clientUrl === '*') {
+      if (
+        !origin ||
+        allowedOrigins.has(origin) ||
+        env.clientUrl === '*' ||
+        origin.endsWith('.vercel.app') ||
+        origin.endsWith('.onrender.com')
+      ) {
         return callback(null, true);
       }
       return callback(new Error(`CORS blocked origin: ${origin}`));
