@@ -39,4 +39,4 @@ check docs for more info.
 
 ## 
 
-For other information, contact me at chitu69420@gmail.com personally.
+For other quieries, contact me at chitu69420@gmail.com personally.
