@@ -1,0 +1,1 @@
+import mongoose from 'mongoose'; const schema=new mongoose.Schema({name:{type:String,required:true},code:{type:String,unique:true},department:{type:mongoose.Schema.Types.ObjectId,ref:'Department',required:true},location:String,description:String},{timestamps:true}); export default mongoose.model('Laboratory',schema);

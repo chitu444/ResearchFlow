@@ -1,0 +1,1 @@
+export default function EmptyState({title='Nothing here yet',message='No records match this view.'}){return <div className="empty"><div className="empty-dot">—</div><h3>{title}</h3><p>{message}</p></div>}

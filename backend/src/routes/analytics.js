@@ -1,0 +1,1 @@
+import {Router} from 'express'; import {authenticate,authorize} from '../middleware/auth.js'; import {overview} from '../controllers/analyticsController.js'; const r=Router(); r.get('/overview',authenticate,authorize('lab_manager','institution_admin'),overview); export default r;
